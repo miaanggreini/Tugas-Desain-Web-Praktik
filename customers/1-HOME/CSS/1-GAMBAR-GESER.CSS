@@ -47,9 +47,9 @@
     /* Efek blur pada latar belakang */
     border-radius: 15px;
     /* Membuat sudut melengkung pada background */
-    width: calc(60% + 20px);
+    width: calc(70% + 20px);
     /* Lebar caption dengan kalkulasi */
-    height: calc(35% + 15px);
+    height: calc(35% - 15px);
     /* Tinggi caption dengan kalkulasi */
 }
 
@@ -64,7 +64,6 @@
 
 .carousel-caption p {
     margin-top: -10px;
-
 }
 
 .carousel-caption .button {
