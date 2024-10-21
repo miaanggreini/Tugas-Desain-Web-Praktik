@@ -125,7 +125,7 @@
     /* Efek transisi */
     color: var(--warna2);
     font-size: calc(20px + 0.5vw);
-    /* Ukuran font dinamis, 10px + 1% dari lebar viewport */
+    /* Ukuran font dinamis, 20px + 0.5% dari lebar viewport */
 }
 
 .paket-content .content h3 {
@@ -167,8 +167,8 @@
     /* Hilangkan padding default */
     list-style: none;
     /* Hilangkan bullet pada list */
-    font-size: calc(10px + 1vw);
-    /* Ukuran font dinamis, 10px + 1% dari lebar viewport */
+    font-size: calc(5px + 1vw);
+    /* Ukuran font dinamis, 5px + 1% dari lebar viewport */
 }
 
 .paket-content .content ul li {
