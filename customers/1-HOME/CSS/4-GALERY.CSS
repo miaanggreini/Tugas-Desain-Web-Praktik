@@ -1,0 +1,19 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna: white;
+    /* Warna */
+    --warna0: black;
+    /* Warna  */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+
+}

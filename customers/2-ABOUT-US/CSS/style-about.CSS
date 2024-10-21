@@ -1,0 +1,170 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna: white;
+    /* Warna */
+    --warna0: black;
+    /* Warna  */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+
+}
+
+.reservasi-btn {
+    border: 2px solid white;
+    color: var(--warna);
+    /* Pastikan warna teks default putih */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reservasi-btn:hover {
+    background-color: var(--warna0);
+    color: black !important;
+    /* Tambahkan !important agar warna teks menjadi hitam saat hover */
+    border: 2px solid white;
+}
+
+.contact-card {
+    background-color: #22303f;
+    /* Warna background sesuai gambar */
+    color: var(--warna);
+    border: 3px solid white;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    min-height: 200px;
+    /* Atur tinggi minimum untuk card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+}
+
+.contact-card h4 {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-card p {
+    margin: 0;
+}
+
+.contact-card i {
+    font-size: 36px;
+}
+
+.hero {
+    background-image: url("../GAMBAR/bg\ 2.avif");
+    /* Ganti URL gambar sesuai keinginan */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    color: var(--warna0);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.copyright {
+    background-color: white;
+    /* Background putih */
+    text-align: center;
+    margin-top: 0;
+    padding: 10px;
+    color: black;
+    /* Teks hitam */
+}
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("../GAMBAR/custom.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2.text-center {
+    font-family: "CustomFont", sans-serif;
+}
+
+
+.FOOTER {
+    padding: 40px 0;
+    /* Padding atas dan bawah */
+    overflow: hidden;
+    /* Menyembunyikan konten yang meluap di luar batas FOOTER */
+    background-color: var(--warna1);
+    /* Warna latar belakang */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1800 900'%3E%3Cpolygon fill='%23394a56' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23206485' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2349606f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23295f7b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%235a7688' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%232f5972' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%236b8ea3' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23345468' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%237da6be' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23374f5f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%238fbfda' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23394a56' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    /* Menyebabkan gambar latar belakang tidak bergerak saat di-scroll */
+    background-size: cover;
+    /* Mengatur ukuran gambar latar belakang */
+    transition: all 5s ease;
+    /* Transisi halus untuk perubahan posisi gambar */
+    color: var(--warna2);
+    /* Warna teks */
+}
+
+.FOOTER:hover {
+    background-color: var(--warna3);
+    /* Mengubah warna latar belakang saat di-hover */
+    color: var(--warna0);
+    /* Mengubah warna teks saat di-hover */
+
+}
+
+.FOOTER a {
+    text-decoration: none;
+    /* Menghilangkan garis bawah pada tautan */
+    color: var(--warna2);
+    /* Warna teks untuk tautan */
+    transition: all 5s ease;
+    /* Transisi halus untuk perubahan posisi gambar */
+}
+
+/* Mengubah warna tautan saat footer di-hover */
+.FOOTER:hover a {
+    color: var(--warna0);
+    /* Mengubah warna teks link saat footer di-hover */
+}
+
+.FOOTER .social-icons i {
+    font-size: 24px;
+    /* Ukuran ikon */
+    margin-right: 15px;
+    /* Jarak antara ikon */
+    color: var(--warna2);
+    /* Warna teks ikon */
+    transition: all 5s ease;
+    /* Transisi halus untuk perubahan posisi gambar */
+}
+
+.FOOTER:hover .social-icons i {
+    color: var(--warna0);
+    /* Mengubah warna ikon saat footer di-hover */
+}
+
+
+.copyright {
+    background-color: var(--warna);
+    /* Background putih */
+    text-align: center;
+    margin-top: 0;
+    padding: 10px;
+    color: black;
+    /* Teks hitam */
+}

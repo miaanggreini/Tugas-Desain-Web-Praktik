@@ -1,0 +1,121 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna: white;
+    /* Warna */
+    --warna0: black;
+    /* Warna  */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+
+}
+
+
+.carousel-item {
+    height: 100vh;
+    /* Menentukan tinggi carousel item */
+}
+
+.carousel-item img {
+    height: 100%;
+    /* Menentukan tinggi gambar */
+    /* Menentukan tinggi gambar */
+    object-fit: cover;
+    /* Menjaga aspek rasio gambar */
+}
+
+.carousel-caption {
+    position: absolute;
+    /* Posisi caption */
+    top: 50%;
+    /* Posisi vertikal */
+    left: 50%;
+    /* Posisi horizontal */
+    transform: translate(-50%, -50%);
+    /* Pusatkan caption */
+    background: rgba(0, 0, 0, 0.5);
+    /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(5px);
+    /* Efek blur pada latar belakang */
+    border-radius: 15px;
+    /* Membuat sudut melengkung pada background */
+    width: calc(60% + 20px);
+    /* Lebar caption dengan kalkulasi */
+    height: calc(35% + 15px);
+    /* Tinggi caption dengan kalkulasi */
+}
+
+.carousel-caption .title {
+    font-weight: bold;
+    /* Ketebalan font */
+    color: var(--warna3);
+    /* Warna teks  */
+    padding: 1%;
+    /* Jarak antara teks dan border */
+}
+
+.carousel-caption p {
+    margin-top: -10px;
+
+}
+
+.carousel-caption .button {
+    display: flex;
+    /* Gunakan Flexbox */
+    justify-content: center;
+    /* Pusatkan secara horizontal */
+    align-items: center;
+    /* Pusatkan secara vertikal */
+    margin-top: 1%;
+    /* Jarak antara teks dan border */
+}
+
+
+.carousel-caption .button a {
+    padding: calc(10px + 1vw) calc(20px + 2vw);
+    /* Padding dinamis */
+    border: none;
+    /* Hapus border */
+    background-color: var(--warna4);
+    /* Warna latar belakang tombol */
+    font-weight: 500;
+    /* Ketebalan font */
+    cursor: pointer;
+    /* Ubah kursor menjadi pointer saat dihover */
+    transition: 0.5s;
+    /* Efek transisi saat dihover */
+    letter-spacing: calc(2px + 0.2vw);
+    /* Jarak antar huruf dinamis */
+    border-radius: 0.5rem;
+    /* Membuat sudut  */
+    color: var(--warna2);
+    /* Warna teks */
+    font-size: calc(1rem + 0.5vw);
+    /* Ukuran font dinamis */
+    /* Ukuran font */
+    text-align: center;
+    /* Pusatkan teks */
+    text-decoration: none;
+    /* Hapus garis bawah */
+    display: inline-block;
+    /* Pastikan tombol berfungsi sebagai elemen inline */
+}
+
+
+
+.carousel-caption .button a:hover {
+    letter-spacing: 3px;
+    /* Jarak antar huruf bertambah saat dihover */
+    background-color: var(--warna5);
+    /* Warna latar belakang tombol */
+    border-radius: 5rem;
+    /* Membuat sudut  */
+}

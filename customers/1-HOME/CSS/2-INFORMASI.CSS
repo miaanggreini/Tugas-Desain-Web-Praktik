@@ -1,0 +1,41 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna: white;
+    /* Warna */
+    --warna0: black;
+    /* Warna  */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #000;
+    /* Warna latar belakang opsional */
+    margin: 0 auto;
+    /* Agar video berada di tengah */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
