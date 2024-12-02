@@ -1,0 +1,48 @@
+/* Definisi warna yang digunakan */
+:root {
+    /* Variabel warna */
+    --warna: white;
+    /* Warna */
+    --warna0: black;
+    /* Warna  */
+    --warna1: #22303F;
+    /* Warna latar belakang */
+    --warna2: #E7E8E7;
+    /* Warna text 1 */
+    --warna3: #8FBFDA;
+    /* Warna text 2 */
+    --warna4: #206485;
+    /* Warna button latar belakang */
+    --warna5: #394A56;
+    /* Warna hover button latar belakang  */
+
+}
+
+* {
+    font-family: sans-serif;
+}
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("../GAMBAR/custom.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.judul {
+    font-family: "CustomFont", sans-serif;
+}
+
+.reservasi-btn {
+    border: 2px solid var(--warna);
+    color: white;
+    /* Pastikan warna teks default putih */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reservasi-btn:hover {
+    background-color: var(--warna);
+    color: black !important;
+    /* Tambahkan !important agar warna teks menjadi hitam saat hover */
+    border: 2px solid white;
+}

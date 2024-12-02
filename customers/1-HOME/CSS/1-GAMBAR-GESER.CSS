@@ -73,48 +73,43 @@
     /* Pusatkan secara horizontal */
     align-items: center;
     /* Pusatkan secara vertikal */
-    margin-top: 1%;
+    margin-top: 0.5%;
     /* Jarak antara teks dan border */
 }
 
 
 .carousel-caption .button a {
-    padding: calc(10px + 1vw) calc(20px + 2vw);
-    /* Padding dinamis */
-    border: none;
-    /* Hapus border */
-    background-color: var(--warna4);
-    /* Warna latar belakang tombol */
-    font-weight: 500;
+    font-weight: bold;
     /* Ketebalan font */
-    cursor: pointer;
-    /* Ubah kursor menjadi pointer saat dihover */
-    transition: 0.5s;
-    /* Efek transisi saat dihover */
-    letter-spacing: calc(2px + 0.2vw);
-    /* Jarak antar huruf dinamis */
-    border-radius: 0.5rem;
-    /* Membuat sudut  */
-    color: var(--warna2);
-    /* Warna teks */
-    font-size: calc(1rem + 0.5vw);
-    /* Ukuran font dinamis */
-    /* Ukuran font */
     text-align: center;
     /* Pusatkan teks */
     text-decoration: none;
     /* Hapus garis bawah */
     display: inline-block;
     /* Pastikan tombol berfungsi sebagai elemen inline */
+    color: var(--warna2);
+    /* Warna teks */
+    font-size: 1rem;
+    /* Ukuran font */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 10px;
+    /* Sudut melengkung */
+    border: 2px solid #3866A3;
+    /* Garis tepi */
+    background-color: var(--warna4);/
+    /* Warna latar belakang tombol */
+    transition: 10s ease-in-out;
+    /* Efek transisi saat dihover */
 }
 
 
 
 .carousel-caption .button a:hover {
-    letter-spacing: 3px;
-    /* Jarak antar huruf bertambah saat dihover */
-    background-color: var(--warna5);
-    /* Warna latar belakang tombol */
-    border-radius: 5rem;
-    /* Membuat sudut  */
+    background: var(--warna4);
+    /* Warna latar belakang saat di-hover */
+    background: linear-gradient(to top, var(--warna3), var(--warna4));
+    /* Warna latar belakang saat di-hover */
+    box-shadow: 1px 1px 10px #FFFFFF;
+    /*Warna bayangan*/
 }

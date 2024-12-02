@@ -17,3 +17,52 @@
     /* Warna hover button latar belakang  */
 
 }
+
+/* Styling Kartu Galeri */
+.GALERY .card {
+    position: relative;
+    /* Menempatkan elemen dalam posisi relatif untuk manipulasi visual */
+    overflow: hidden;
+    /* Memastikan elemen di luar batas kartu tidak terlihat */
+    border-radius: 10px;
+    /* Membuat sudut kartu melengkung */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Menambahkan animasi transisi pada transformasi dan bayangan */
+}
+
+.GALERY .card:hover {
+    transform: scale(1.5);
+    /* Memperbesar ukuran kartu saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    /* Memberikan efek bayangan pada kartu */
+    z-index: 5;
+    /* Memastikan kartu yang di-hover berada di atas elemen lainnya */
+}
+
+.GALERY .card img {
+    width: 100%;
+    /* Memastikan gambar memenuhi lebar kartu */
+    height: auto;
+    /* Mempertahankan rasio aspek gambar */
+    filter: grayscale(65);
+    /* Menambahkan efek grayscale (hitam-putih) pada gambar */
+    transition: filter 1s ease;
+    /* Menambahkan animasi transisi saat filter berubah */
+}
+
+.GALERY .card:hover img {
+    filter: grayscale(0);
+    /* Menghapus efek grayscale saat kartu di-hover */
+}
+
+/* Refleksi */
+.GALERY .card .reflection {
+    opacity: 0;
+    /* Refleksi tidak terlihat secara default */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.15) 100%);
+    /* Membuat efek gradasi refleksi */
+    transition: all .1s ease;
+    /* Menambahkan animasi transisi pada refleksi */
+    mix-blend-mode: soft-light;
+    /* Menggabungkan warna refleksi dengan latar belakang secara halus */
+}

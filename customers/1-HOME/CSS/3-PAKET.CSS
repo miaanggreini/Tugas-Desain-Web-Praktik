@@ -18,6 +18,11 @@
 
 }
 
+.card {
+    max-height: 350px;
+    border-radius: 0.5rem;
+}
+
 .paket-content {
     position: relative;
     /* Posisi relatif untuk konten */
@@ -38,7 +43,7 @@
 }
 
 
-.header .button a {
+.paket.button a {
     padding: 10px 20px;
     /*padding*/
     background-color: var(--warna4);
@@ -58,8 +63,9 @@
     /* Lebar 100% dari konten */
     height: 100%;
     /* Tinggi 100% dari konten */
-    object-fit: cover;
+    object-fit: contain;
     /* Menutupi seluruh area item tanpa mengubah rasio */
+    border-radius: 0.5rem;
 }
 
 .paket-content::after {
@@ -92,6 +98,51 @@
 }
 
 /* Bagian konten yang muncul saat hover */
+
+
+.paket-content .card-img-overlay h2 {
+
+    background: rgba(0,
+            0,
+            0,
+            0.5);
+    /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(5px);
+    /* Efek blur pada latar belakang */
+    border-radius: 0.5rem;
+    /* Sudut melengkung */
+    opacity: 1;
+    /* Opasitas awal 1 */
+    transition: 0.3s ease-in-out;
+    /* Efek transisi */
+    color: var(--warna2);
+    font-size: calc(10px + 1.5vw);
+    /* Ukuran font dinamis, 20px + 0.5% dari lebar viewport */
+    text-align: center;
+    margin: 10px 40px;
+}
+
+.paket-content .card-img-overlay h3 {
+    background: rgba(0,
+            0,
+            0,
+            0.5);
+    /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(5px);
+    /* Efek blur pada latar belakang */
+    border-radius: 0.5rem;
+    /* Sudut melengkung */
+    opacity: 1;
+    /* Opasitas awal 1 */
+    transition: 0.3s ease-in-out;
+    /* Efek transisi */
+    color: var(--warna2);
+    font-size: calc(10px + 0.5vw);
+    /* Ukuran font dinamis, 20px + 0.5% dari lebar viewport */
+    text-align: center;
+    margin: 190px 20px 40px;
+}
+
 .paket-content .content {
     width: 70%;
     /* Lebar 80% dari konten */
@@ -109,104 +160,107 @@
     /* Efek transisi */
 }
 
-.paket-content .content h2 {
-    background: rgba(0,
-            0,
-            0,
-            0.5);
-    /* Warna latar belakang dengan transparansi */
-    backdrop-filter: blur(5px);
-    /* Efek blur pada latar belakang */
-    border-radius: 0.5rem;
-    /* Sudut melengkung */
-    opacity: 1;
-    /* Opasitas awal 1 */
-    transition: 0.3s ease-in-out;
-    /* Efek transisi */
-    color: var(--warna2);
-    font-size: calc(20px + 0.5vw);
-    /* Ukuran font dinamis, 20px + 0.5% dari lebar viewport */
-}
-
-.paket-content .content h3 {
-    color: var(--warna0);
-    /* Warna teks */
-    transition: 0.3s ease-in-out;
-    /* Efek transisi */
-    opacity: 1;
-    /* Opasitas awal 1 */
-    backdrop-filter: blur(5px);
-    /* Efek blur pada latar belakang */
-    border-radius: 5rem;
-    /* Sudut melengkung */
-}
-
-/* Daftar fasilitas (ul) yang akan muncul saat hover */
 .paket-content .content ul {
-    display: grid;
-    /* Ubah ul menjadi grid */
-    grid-template-columns: repeat(3, 1fr);
-    /* Atur grid dengan 3 kolom */
+    display: flex;
+    /* Ubah dari grid ke flexbox */
+    flex-wrap: wrap;
+    /* Pastikan elemen akan membungkus jika layar kecil */
+    justify-content: center;
+    /* Pusatkan item secara horizontal */
     gap: 5px;
-    /* Tambahkan jarak antar item */
-    margin-top: -50px;
-    /* Jarak atas */
-    color: var(--warna2);
-    /* Warna teks */
-    opacity: 0;
-    /* Opasitas awal 0 */
-    max-height: 0;
-    /* Pada awalnya disembunyikan */
-    overflow: hidden;
-    /* Menyembunyikan konten yang melampaui batas */
-    transition: opacity 0.5s ease, max-height 0.5s ease;
-    /* Efek transisi */
-    text-align: left;
-    /* Rata kiri untuk teks */
+    /* Jarak antar elemen */
+    margin: 30px 0px;
+    /*  margin */
     padding: 0;
-    /* Hilangkan padding default */
+    /* Hapus padding */
     list-style: none;
-    /* Hilangkan bullet pada list */
-    font-size: calc(5px + 1vw);
-    /* Ukuran font dinamis, 5px + 1% dari lebar viewport */
+    /* Hapus bullet */
+    max-height: none;
+    /* Atur tinggi default */
+    overflow-y: visible;
+    /* Pastikan semua elemen terlihat */
+    opacity: 0;
+    /* Tampilkan elemen */
+    font-size: calc(4px + 0.5vw);
+    /* Ukuran font dinamis, 20px + 0.5% dari lebar viewport */
+    text-align: left;
+    /* Pusatkan teks secara horizontal */
+    transition: 0.5s ease-in-out;
+    /* Efek transisi */
 }
 
 .paket-content .content ul li {
-    padding: 2.5px;
-    /* Jarak dalam pada tiap item */
+
+    flex: 1 1 calc(30% - 10px);
+    /* Lebar dinamis 20%, dengan margin */
+    min-width: 65px;
+    /* Lebar minimum untuk elemen */
+    max-width: 150px;
+    /* Lebar maksimum untuk elemen */
     text-align: center;
-    /* Pusatkan teks di setiap item */
+    /* Pusatkan teks secara horizontal */
+    padding: 5px;
+    /*padding*/
+    background-color: var(--warna4);
+    /* Warna latar belakang */
+    border-radius: 5rem;
+    /*Sudut melengkung*/
+    white-space: nowrap;
+    /* Pastikan teks tidak terpotong */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Tambahkan titik-titik jika teks panjang */
+    color: var(--warna);
+    /*Warna teks*/
 }
+
 
 /* Hover state untuk menampilkan ul */
 .paket-content:hover .content ul {
     opacity: 1;
-    /* Tampilkan ul saat hover */
-    max-height: 500px;
-    /* Atur tinggi maksimum */
+    /* Tampilkan daftar */
+    max-height: 90px;
+    /* Tinggi maksimum */
+    overflow-y: auto;
+    /* Scroll jika melebihi tinggi */
 }
 
-.paket-content:hover .content h2 {
-    transform: scale(1);
-    /* Skala 1 saat dihover */
-    opacity: 1;
-    /* Opasitas 1 saat dihover */
+/* Hover juga diterapkan ke elemen induk agar efek tidak hilang */
+.paket-content:hover .content {
+    overflow: visible;
+    /* Pastikan konten tetap terlihat */
 }
 
-.paket-content:hover .content h3 {
+/* Scrollbar styling (opsional) */
+.paket-content .content ul::-webkit-scrollbar {
+    width: 6px;
+    /* Lebar scrollbar */
+}
+
+.paket-content .content ul::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    /* Warna scrollbar */
+    border-radius: 10px;
+    /* Bentuk melengkung */
+}
+
+.paket-content .content ul::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+    /* Warna scrollbar saat hover */
+}
+
+
+
+
+.paket-content:hover .card-img-overlay h3 {
     opacity: 0;
 }
 
-.paket-content:hover .content h1 {
-    opacity: 1;
-    /* Opasitas 1 saat dihover */
-    transform: translateY(0);
-    /* Geser konten ke posisi awal */
-}
+
 
 /* Atur posisi tombol dan pastikan z-index cukup tinggi */
 .paket-content .content .button {
-    margin-top: -10px;
+    margin-top: 10px;
     /* Jarak atas */
     justify-content: center;
     /* Pusatkan secara horizontal */
@@ -223,27 +277,7 @@
 }
 
 /* Atur gaya tombol */
-.paket-content .content .button a {
-    padding: 10px 20px;
-    /* Tambahkan padding untuk memberi lebih banyak ruang pada tombol */
-    border: none;
-    /* Hapus border */
-    background-color: var(--warna4);
-    /* Warna latar belakang tombol */
-    font-weight: 500;
-    /* Ketebalan font */
-    cursor: pointer;
-    /* Ubah kursor menjadi pointer saat dihover */
-    transition: 0.5s;
-    /* Efek transisi saat dihover */
-    letter-spacing: 2px;
-    /* Jarak antar huruf */
-    border-radius: 0.5rem;
-    /* Membuat sudut  */
-    color: var(--warna2);
-    /* Warna teks */
-    font-size: 1rem;
-    /* Ukuran font */
+.PAKET .button a {
     font-weight: bold;
     /* Ketebalan font */
     text-align: center;
@@ -252,17 +286,33 @@
     /* Hapus garis bawah */
     display: inline-block;
     /* Pastikan tombol berfungsi sebagai elemen inline */
+    color: var(--warna2);
+    /* Warna teks */
+    font-size: 1rem;
+    /* Ukuran font */
+    padding: 10px 20px;
+    /* Padding */
+    border-radius: 10px;
+    /* Sudut melengkung */
+    border: 2px solid #3866A3;
+    /* Garis tepi */
+    background-color: var(--warna4);/
+    /* Warna latar belakang tombol */
+    transition: 10s ease-in-out;
+    /* Efek transisi saat dihover */
 }
 
 /* Efek hover untuk tombol */
-.paket-content .content .button a:hover {
-    letter-spacing: 3px;
-    /* Jarak antar huruf bertambah saat dihover */
-    background-color: var(--warna5);
-    /* Warna latar belakang tombol */
-    border-radius: 5rem;
-    /* Membuat sudut  */
+.PAKET .button a:hover {
+    background: var(--warna4);
+    /* Warna latar belakang saat di-hover */
+    background: linear-gradient(to top, var(--warna3), var(--warna4));
+    /* Warna latar belakang saat di-hover */
+    box-shadow: 1px 1px 10px #FFFFFF;
+    /*Warna bayangan*/
 }
+
+
 
 /* Tampilkan tombol saat gambar di-hover */
 .paket-content:hover .content .button {
@@ -286,29 +336,76 @@
     /* Pastikan border tidak mengganggu klik */
 }
 
+/* Mengatur grid menjadi 5 kolom tetap */
+.custom-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 kolom dengan lebar sama */
+    gap: 1rem;
+    /* Jarak antar elemen */
+}
+
+/* Styling lingkaran */
 .circle {
-    width: 10vw;
-    /* Ukuran dinamis, tergantung viewport */
-    height: 10vw;
-    /* Tinggi disesuaikan dengan lebar untuk mempertahankan bentuk lingkaran */
+    width: 80px;
+    /* Sesuaikan ukuran sesuai kebutuhan */
+    height: 80px;
+    /* Sesuaikan ukuran sesuai kebutuhan */
     border-radius: 50%;
-    /* Membuatnya berbentuk lingkaran */
+    /* Membentuk lingkaran */
     display: flex;
-    /* Menggunakan flexbox */
+    /* Menggunakan flexbox untuk mengatur posisi teks di tengah */
     align-items: center;
-    /* Pusatkan secara vertikal */
+    /* Pusatkan teks secara horizontal dan vertikal */
     justify-content: center;
-    /* Pusatkan secara horizontal */
+    /* Pusatkan teks secara horizontal dan vertikal */
     margin: 0 auto;
-    /* Memusatkan elemen dalam kontainer */
+    /* Memusatkan elemen dalam kolom */
+    border: 2px solid var(--warna0);
+    transition: 0.3s;
+    /* Efek hover transisi */
 }
 
+/* Efek hover pada lingkaran */
+.circle:hover {
+    background: var(--warna4);
+    /* Warna latar belakang saat di-hover */
+    background: linear-gradient(to top, var(--warna3), var(--warna4));
+    /* Warna latar belakang saat di-hover */
+    color: white;
+}
+
+/* Ukuran ikon */
 .circle i {
-    font-size: calc(10vw + 10px);
-    /* Ukuran font dinamis, bisa disesuaikan */
+    font-size: 2.5rem;
+    /* Ukuran ikon */
 }
 
+/* Teks fasilitas */
 .fasilitas-text {
     color: var(--warna0);
-    /* Gunakan variabel warna jika diperlukan */
+    /* Warna teks */
+    text-align: center;
+    /* Pusatkan teks secara horizontal dan vertikal */
+    font-size: 0.9rem;
+    /* Ukuran font */
+}
+
+.tekan {
+    box-shadow: 0 10px 0 var(--warna0);
+    /*Warna bayangan*/
+}
+
+.tekan:focus {
+    border: none;
+    /*Warna bayangan*/
+    outline: none;
+    /*Warna bayangan*/
+}
+
+.tekan:active {
+    box-shadow: 0 5px var(--warna0);
+    /*Warna bayangan*/
+    transform: translateY(5px);
+    /*Warna bayangan*/
 }

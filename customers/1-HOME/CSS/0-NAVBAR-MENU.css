@@ -46,3 +46,9 @@
     /* Tambahkan !important agar warna teks menjadi hitam saat hover */
     border: 2px solid white;
 }
+
+/* @media (max-width: 768px) {
+    .shadow-lg {
+        box-shadow: none !important;
+    }
+} */

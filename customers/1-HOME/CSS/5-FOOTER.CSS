@@ -28,14 +28,17 @@
     background-color: var(--warna1);
     /* Warna latar belakang */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1800 900'%3E%3Cpolygon fill='%23394a56' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23206485' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2349606f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23295f7b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%235a7688' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%232f5972' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%236b8ea3' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23345468' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%237da6be' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23374f5f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%238fbfda' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23394a56' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    /* Menyebabkan gambar latar belakang tidak bergerak saat di-scroll */
-    background-size: cover;
+    /* Menambahkan gambar latar belakang */
+    background-repeat: no-repeat;
+    /* Menghindari pengulangan gambar */
+    background-size: contain;
     /* Mengatur ukuran gambar latar belakang */
     transition: all 5s ease;
     /* Transisi halus untuk perubahan posisi gambar */
     color: var(--warna2);
     /* Warna teks */
+    background-position: center bottom;
+    /* Mengatur posisi gambar latar belakang */
 }
 
 .FOOTER:hover {
