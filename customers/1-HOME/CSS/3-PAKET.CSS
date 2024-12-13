@@ -21,6 +21,7 @@
 .card {
     max-height: 350px;
     border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 .paket-content {
@@ -63,9 +64,11 @@
     /* Lebar 100% dari konten */
     height: 100%;
     /* Tinggi 100% dari konten */
-    object-fit: contain;
+    object-fit: cover;
     /* Menutupi seluruh area item tanpa mengubah rasio */
     border-radius: 0.5rem;
+    /* Sudut melengkung */
+
 }
 
 .paket-content::after {

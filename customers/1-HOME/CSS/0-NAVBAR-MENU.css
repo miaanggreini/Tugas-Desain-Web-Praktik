@@ -31,6 +31,8 @@
 
 .judul {
     font-family: "CustomFont", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
 }
 
 .reservasi-btn {
