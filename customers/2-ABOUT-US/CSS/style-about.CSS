@@ -18,6 +18,8 @@
 
 }
 
+
+
 .reservasi-btn {
     border: 2px solid white;
     color: var(--warna);
@@ -63,21 +65,43 @@
 
 .hero {
     background-image: url("../GAMBAR/About Us1.JPG");
-    /* Ganti URL gambar sesuai keinginan */
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     height: 600px;
     position: relative;
-    color: var(--warna0);
+    color: var(--warna);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
+
 .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
     text-align: center;
+    color: var(--warna);
+    max-width: 90%;
 }
+
+.judul {
+    font-family: "CustomFont", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text .text {
+    margin: 0;
+    padding: 10px;
+
+    color: var(--warna2);
+}
+
 
 .copyright {
     background-color: white;
