@@ -107,10 +107,7 @@
 
 
 .carousel-caption .button a:hover {
-    background: var(--warna4);
+    background: var(--warna2);
     /* Warna latar belakang saat di-hover */
-    background: linear-gradient(to top, var(--warna3), var(--warna4));
-    /* Warna latar belakang saat di-hover */
-    box-shadow: 1px 1px 10px #FFFFFF;
-    /*Warna bayangan*/
+    color: var(--warna0);
 }

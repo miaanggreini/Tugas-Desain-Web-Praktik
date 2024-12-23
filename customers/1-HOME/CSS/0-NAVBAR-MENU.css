@@ -30,27 +30,37 @@
 }
 
 .judul {
-    font-family: "CustomFont", sans-serif;
     font-weight: bold;
-    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .reservasi-btn {
-    border: 2px solid var(--warna);
-    color: white;
-    /* Pastikan warna teks default putih */
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    /* Warna teks default */
+    background-color: transparent;
+    /* Pastikan background default transparan */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .reservasi-btn:hover {
-    background-color: var(--warna);
-    color: black !important;
-    /* Tambahkan !important agar warna teks menjadi hitam saat hover */
+    background-color: transparent;
+    /* Tetap transparan saat hover */
+    color: #acacac;
+    /* Warna abu-abu saat hover */
     border: 2px solid white;
 }
 
-/* @media (max-width: 768px) {
-    .shadow-lg {
-        box-shadow: none !important;
-    }
-} */
+.reservasi-btn:focus {
+    outline: none;
+    /* Hapus garis biru default */
+    border: 2px solid white;
+}
+
+.reservasi-btn:active {
+    background-color: white !important;
+    /* Background putih saat tombol diklik */
+    color: black !important;
+    /* Warna teks hitam saat tombol diklik */
+    border: 2px solid white;
+}

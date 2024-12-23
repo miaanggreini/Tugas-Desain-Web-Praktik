@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paket Glamping</title>
+    <title>Teras-Merapi-Kelompok-1</title>
     <link
       rel="stylesheet"
       href="../../fontawesome-free-6.5.2-web/css/all.min.css"
@@ -22,7 +22,7 @@
     <section class="MENU NAVBAR">
       <!-- Navbar -->
       <nav
-        class="navbar navbar-expand-lg navbar-dark py-3"
+        class="navbar navbar-expand-lg navbar-dark py-3 fixed-top"
         style="background-color: #22303f"
       >
         <div class="container">
@@ -56,7 +56,7 @@
                 <a class="nav-link" href="../1-HOME/index.html">Home</a>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link" href="../2-ABOUT-US/index.html">About Us</a>
+                <a class="nav-link" href="../2-ABOUT-US/about.html">About Us</a>
               </li>
               <li class="nav-item me-3">
                 <a class="nav-link" href="../3-PACKAGE/index.html">Package</a>
@@ -64,7 +64,8 @@
               <li class="nav-item">
                 <a
                   class="nav-link btn btn-outline-primary text-white px-3 reservasi-btn"
-                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#reservationModal"
                   >Reservasi</a
                 >
               </li>
@@ -74,9 +75,9 @@
       </nav>
     </section>
     <section class="INFORMASI">
-      <div class="text-center shadow p-3 m-2 m-xl-5 bg-body rounded-3">
-        <h1 class="judul">PAKET</h1>
-        <p class="p-5">
+      <div class="text-center p-3 m-2 m-xl-5 bg-body rounded-3">
+        <h2 class="judul">Paket</h2>
+        <p class="py-2 px-5">
           Teras Merapi menawarkan beragam paket wisata untuk pengalaman liburan
           yang tak terlupakan. Dari glamping di kaki Gunung Merapi hingga
           aktivitas seru yang mendekatkan Anda dengan keindahan alam. Rasakan
@@ -89,8 +90,11 @@
     </section>
 
     <section class="PACKAGE">
-      <div class="shadow p-2 m-2 m-xl-5 bg-body rounded-3">
-        <h1 class="text-center mb-4 mt-3 judul">PAKET GLAMPING</h1>
+      <div class="m-2 m-xl-5 bg-body rounded-3">
+        <!-- Paket Glamping -->
+        <h2 id="glamping" class="text-center mb-4 mt-1 judul">
+          Paket Glamping
+        </h2>
         <div class="row g-4 my-sm-1 mx-sm-1">
           <!-- Kartu Paket A -->
           <div class="col-md-6">
@@ -119,7 +123,9 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
@@ -152,14 +158,19 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <h1 class="text-center mb-4 mt-3 judul">PAKET CAMPING PREMIUM</h1>
+        <!-- Paket Camping Premium -->
+        <h2 id="camping-premium" class="text-center mb-4 mt-3 judul">
+          Paket Camping Premium
+        </h2>
         <div class="row g-4">
           <!-- Kartu Paket 4 Orang -->
           <div class="col-md-4">
@@ -187,7 +198,9 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
@@ -219,11 +232,14 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
           </div>
+
           <!-- Kartu Paket 2 Orang -->
           <div class="col-md-4">
             <div class="card rounded-3">
@@ -250,14 +266,19 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <h1 class="text-center mb-4 mt-3 judul">PAKET CAMPING MEDIUM</h1>
+        <!-- Paket Camping Medium -->
+        <h2 id="camping-medium" class="text-center mb-4 mt-3 judul">
+          Paket Camping Medium
+        </h2>
         <div class="row g-4">
           <!-- Kartu Paket 4 Orang -->
           <div class="col-md-4">
@@ -282,7 +303,9 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
@@ -311,7 +334,9 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
@@ -340,7 +365,9 @@
               </div>
               <div class="card-footer text-center">
                 <div class="button">
-                  <a href="https://www.youtube.com/">Reservasi</a>
+                  <a data-bs-toggle="modal" data-bs-target="#reservationModal"
+                    >Reservasi</a
+                  >
                 </div>
               </div>
             </div>
@@ -361,11 +388,32 @@
               Nikmati suasana tenang dan berbagai aktivitas seru bersama
               keluarga atau teman.
             </p>
+
             <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook icon"></i></a>
-              <a href="#"><i class="fab fa-instagram icon"></i></a>
-              <a href="#"><i class="fab fa-tiktok icon"></i></a>
-              <a href="#"><i class="fab fa-whatsapp icon"></i></a>
+              <a
+                href="https://www.facebook.com/p/Wisata-Teras-Merapi-100066814719880/?locale=id_ID"
+                target="_blank"
+              >
+                <i class="fab fa-facebook icon"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/wisata.terasmerapi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+              >
+                <i class="fab fa-instagram icon"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@wisataterasmerapi?_t=8V0Tw56MJF3&_r=1"
+                target="_blank"
+              >
+                <i class="fab fa-tiktok icon"></i>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=%2B6285290125106&text&type=phone_number&app_absent=0"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp icon"></i>
+              </a>
             </div>
           </div>
 
@@ -375,12 +423,11 @@
             <ul class="list-unstyled">
               <li><a class="nav-link" href="../1-HOME/index.html">Home</a></li>
               <li>
-                <a class="nav-link" href="../2-ABOUT-US/index.html">About Us</a>
+                <a class="nav-link" href="../2-ABOUT-US/about.html">About Us</a>
               </li>
               <li>
                 <a class="nav-link" href="../3-PACKAGE/index.html">Package</a>
               </li>
-              <li><a href="#">Reservasi</a></li>
             </ul>
           </div>
 
@@ -403,4 +450,238 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
   </body>
+  <main>
+    <style>
+      /* Modal Content */
+      .modal-content {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Label Form */
+      .form-label {
+        font-weight: bold;
+      }
+
+      /* Fokus pada input */
+      .form-control:focus {
+        border-color: #6c757d;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .btn-reservation {
+        background-color: #206485;
+        color: white;
+        transition: all 0.3s ease; /* Transisi halus */
+      }
+
+      /* Tombol Reservasi (Hover) */
+      .btn-reservation:hover {
+        background-color: #394a56;
+        border-color: #545b62;
+        transform: scale(1.05); /* Sedikit membesarkan tombol */
+        color: white;
+      }
+
+      /* Tombol Reservasi (Active/Klik) */
+      .btn-reservation:active {
+        background-color: rgba(255, 255, 255, 0.5); /* Warna putih transparan */
+        border-color: rgba(255, 255, 255, 0.3); /* Border transparan */
+        color: rgba(0, 0, 0, 0.7); /* Teks menjadi abu gelap */
+      }
+
+      /* Ukuran Modal Dialog */
+      .modal-dialog {
+        max-width: 700px; /* Lebar modal dapat disesuaikan sesuai kebutuhan */
+      }
+
+      /* Efek hover pada tombol di dalam modal */
+      .modal-footer .btn:hover {
+        background-color: #5399ce;
+        border-color: #545b62;
+        transform: scale(1.05); /* Sedikit membesarkan tombol */
+        transition: all 0.3s ease; /* Efek transisi halus */
+      }
+    </style>
+    <!-- Modal Reservasi -->
+    <div
+      class="modal fade"
+      id="reservationModal"
+      tabindex="-1"
+      aria-labelledby="reservationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reservationModalLabel">
+              Reservasi Penginapan Glamping
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="reservationForm">
+              <!-- Form Reservasi -->
+              <div class="mb-3">
+                <label for="guestName" class="form-label">Nama</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="guestName"
+                  placeholder="Masukkan nama Anda"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="guestEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="guestEmail"
+                  placeholder="Masukkan email Anda"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="guestPhone" class="form-label">No Telepon</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="guestPhone"
+                  placeholder="Masukkan no telepon Anda"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="accommodation" class="form-label"
+                  >Pilih Paket</label
+                >
+                <select class="form-select" id="accommodation" required>
+                  <option value="" disabled selected>Pilih paket...</option>
+                  <option value="750000">Glamping Paket A - Rp 750,000</option>
+                  <option value="750000">Glamping Paket B - Rp 600,000</option>
+                  <option value="750000">Premium 4 orang - Rp 350,000</option>
+                  <option value="750000">Premium 3 orang - Rp 300,000</option>
+                  <option value="750000">Premium 2 orang - Rp 250,000</option>
+                  <option value="750000">Medium 4 orang - Rp 260,000</option>
+                  <option value="750000">Medium 3 orang - Rp 210,000</option>
+                  <option value="750000">Medium 2 orang - Rp 160,000</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="price" class="form-label">Harga</label>
+                <input type="text" class="form-control" id="price" readonly />
+              </div>
+
+              <div class="mb-3 d-flex">
+                <div class="me-2 w-50">
+                  <label for="checkinDate" class="form-label"
+                    >Tanggal Check-In</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="checkinDate"
+                    required
+                  />
+                </div>
+
+                <div class="w-50">
+                  <label for="checkoutDate" class="form-label"
+                    >Tanggal Check-Out</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="checkoutDate"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="notes" class="form-label">Catatan</label>
+                <textarea
+                  class="form-control"
+                  id="notes"
+                  rows="4"
+                  placeholder="Tambahkan catatan tambahan (opsional)"
+                ></textarea>
+              </div>
+
+              <!-- Tombol Submit Form -->
+              <button type="submit" class="btn btn-light btn-reservation">
+                Reservasi Sekarang
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Konfirmasi -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      aria-labelledby="confirmationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmationModalLabel">
+              Reservasi Berhasil
+            </h5>
+          </div>
+          <div class="modal-body">
+            <p>Reservasi Anda telah berhasil dilakukan</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="confirmButton">
+              Oke
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+            // Update harga secara otomatis berdasarkan pilihan paket
+      document.getElementById('accommodation').addEventListener('change', function () {
+        const selectedPrice = this.value;
+        document.getElementById('price').value = selectedPrice ? Rp ${parseInt(selectedPrice).toLocaleString('id-ID')} : '';
+      });
+
+      // Menangani submit form reservasi
+      document.getElementById('reservationForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah refresh halaman
+
+        // Inisialisasi modal konfirmasi
+        const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+
+        // Tutup modal reservasi jika terbuka
+        const reservationModal = bootstrap.Modal.getInstance(document.getElementById('reservationModal'));
+        if (reservationModal) {
+          reservationModal.hide();
+        }
+
+        // Tampilkan modal konfirmasi
+        confirmationModal.show();
+
+        // Kembali ke halaman awal ketika tombol "Oke" diklik
+        document.getElementById('confirmButton').addEventListener('click', function () {
+          confirmationModal.hide();
+          window.location.href = 'index.html'; // Ganti dengan halaman awal Anda
+        });
+      });
+    </script>
+  </main>
 </html>

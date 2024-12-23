@@ -31,23 +31,29 @@
 }
 
 .GALERY .card:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     /* Memperbesar ukuran kartu saat hover */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     /* Memberikan efek bayangan pada kartu */
     z-index: 5;
     /* Memastikan kartu yang di-hover berada di atas elemen lainnya */
+    object-fit: initial;
+    /* Menampilkan gambar tanpa terpotong */
 }
 
 .GALERY .card img {
     width: 100%;
     /* Memastikan gambar memenuhi lebar kartu */
-    height: auto;
-    /* Mempertahankan rasio aspek gambar */
-    filter: grayscale(65);
+    height: calc(20vw);
+    /* Tinggi gambar dihitung berdasarkan 20% dari lebar viewport */
+    filter: grayscale(70%);
     /* Menambahkan efek grayscale (hitam-putih) pada gambar */
     transition: filter 1s ease;
     /* Menambahkan animasi transisi saat filter berubah */
+    height: 450px;
+    /* Atur tinggi seragam */
+    object-fit: cover;
+    /* Memastikan gambar menyesuaikan dimensi tanpa distorsi */
 }
 
 .GALERY .card:hover img {
@@ -57,12 +63,27 @@
 
 /* Refleksi */
 .GALERY .card .reflection {
-    opacity: 0;
-    /* Refleksi tidak terlihat secara default */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.15) 100%);
-    /* Membuat efek gradasi refleksi */
-    transition: all .1s ease;
-    /* Menambahkan animasi transisi pada refleksi */
-    mix-blend-mode: soft-light;
-    /* Menggabungkan warna refleksi dengan latar belakang secara halus */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    opacity: 0.3;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.15));
+}
+
+/* Ukuran untuk layar tablet */
+@media (max-width: 768px) {
+    .GALERY .card img {
+        height: calc(25vw);
+        /* Tinggi dihitung berdasarkan 25% dari lebar viewport */
+    }
+}
+
+/* Ukuran untuk layar ponsel */
+@media (max-width: 576px) {
+    .GALERY .card img {
+        height: calc(30vw);
+        /* Tinggi dihitung berdasarkan 30% dari lebar viewport */
+    }
 }

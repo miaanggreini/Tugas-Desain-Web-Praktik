@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <!-- Ganti 'logo.png' dengan path ke gambar logo perusahaan Anda -->
+            <img src="asset/teras.png" alt="Logo Perusahaan" class="logo">
+
+          </div>
+      <ul>
+        <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="kategori.html"><i class="fas fa-folder"></i> Kategori Paket</a></li>
+        <li><a href="paket.html"><i class="fas fa-box"></i> Paket</a></li>
+        <li><a href="reservasi.html"><i class="fas fa-calendar-check"></i> Reservasi</a></li>
+        <li><a href="laporan.html"><i class="fas fa-file-alt"></i> Laporan</a></li>
+        <li class="active"><a href="dataadmin.html"><i class="fas fa-user"></i> Admin</a></li>
+        <li><a href="logout"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1>Data Admin</h1>
+      <button class="btn-add"><i class="fas fa-plus"></i> Tambah Admin</button>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>No_Telp</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Admin1</td>
+              <td>Admin1@gmail.com</td>
+              <td>08100991911</td>
+              <td>
+                <button class="btn-action edit"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-action delete"><i class="fas fa-trash"></i> Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
