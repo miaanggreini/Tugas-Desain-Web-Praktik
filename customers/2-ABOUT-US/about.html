@@ -704,40 +704,42 @@
         border-color: #6c757d;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       }
+
       .btn-reservation {
         background-color: #206485;
         color: white;
-        transition: all 0.3s ease; /* Transisi halus */
+        transition: all 0.3s ease;
       }
 
       /* Tombol Reservasi (Hover) */
       .btn-reservation:hover {
         background-color: #394a56;
         border-color: #545b62;
-        transform: scale(1.05); /* Sedikit membesarkan tombol */
+        transform: scale(1.05);
         color: white;
       }
 
       /* Tombol Reservasi (Active/Klik) */
       .btn-reservation:active {
-        background-color: rgba(255, 255, 255, 0.5); /* Warna putih transparan */
-        border-color: rgba(255, 255, 255, 0.3); /* Border transparan */
-        color: rgba(0, 0, 0, 0.7); /* Teks menjadi abu gelap */
+        background-color: rgba(255, 255, 255, 0.5);
+        border-color: rgba(255, 255, 255, 0.3);
+        color: rgba(0, 0, 0, 0.7);
       }
 
       /* Ukuran Modal Dialog */
       .modal-dialog {
-        max-width: 700px; /* Lebar modal dapat disesuaikan sesuai kebutuhan */
+        max-width: 700px;
       }
 
       /* Efek hover pada tombol di dalam modal */
       .modal-footer .btn:hover {
         background-color: #5399ce;
         border-color: #545b62;
-        transform: scale(1.05); /* Sedikit membesarkan tombol */
-        transition: all 0.3s ease; /* Efek transisi halus */
+        transform: scale(1.05);
+        transition: all 0.3s ease;
       }
     </style>
+
     <!-- Modal Reservasi -->
     <div
       class="modal fade"
@@ -802,13 +804,13 @@
                 <select class="form-select" id="accommodation" required>
                   <option value="" disabled selected>Pilih paket...</option>
                   <option value="750000">Glamping Paket A - Rp 750,000</option>
-                  <option value="750000">Glamping Paket B - Rp 600,000</option>
-                  <option value="750000">Premium 4 orang - Rp 350,000</option>
-                  <option value="750000">Premium 3 orang - Rp 300,000</option>
-                  <option value="750000">Premium 2 orang - Rp 250,000</option>
-                  <option value="750000">Medium 4 orang - Rp 260,000</option>
-                  <option value="750000">Medium 3 orang - Rp 210,000</option>
-                  <option value="750000">Medium 2 orang - Rp 160,000</option>
+                  <option value="600000">Glamping Paket B - Rp 600,000</option>
+                  <option value="350000">Premium 4 orang - Rp 350,000</option>
+                  <option value="300000">Premium 3 orang - Rp 300,000</option>
+                  <option value="250000">Premium 2 orang - Rp 250,000</option>
+                  <option value="260000">Medium 4 orang - Rp 260,000</option>
+                  <option value="210000">Medium 3 orang - Rp 210,000</option>
+                  <option value="160000">Medium 2 orang - Rp 160,000</option>
                 </select>
               </div>
 
@@ -889,35 +891,51 @@
         </div>
       </div>
     </div>
+
     <script>
-            // Update harga secara otomatis berdasarkan pilihan paket
-      document.getElementById('accommodation').addEventListener('change', function () {
-        const selectedPrice = this.value;
-        document.getElementById('price').value = selectedPrice ? Rp ${parseInt(selectedPrice).toLocaleString('id-ID')} : '';
-      });
+      // Update harga secara otomatis berdasarkan pilihan paket
+      document
+        .getElementById("accommodation")
+        .addEventListener("change", function () {
+          const selectedPrice = this.value;
+          const priceField = document.getElementById("price");
+          if (selectedPrice) {
+            priceField.value = `Rp ${parseInt(selectedPrice).toLocaleString(
+              "id-ID"
+            )}`;
+          } else {
+            priceField.value = "";
+          }
+        });
 
       // Menangani submit form reservasi
-      document.getElementById('reservationForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Mencegah refresh halaman
+      document
+        .getElementById("reservationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        // Inisialisasi modal konfirmasi
-        const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+          // Inisialisasi modal konfirmasi
+          const confirmationModal = new bootstrap.Modal(
+            document.getElementById("confirmationModal")
+          );
 
-        // Tutup modal reservasi jika terbuka
-        const reservationModal = bootstrap.Modal.getInstance(document.getElementById('reservationModal'));
-        if (reservationModal) {
-          reservationModal.hide();
-        }
+          // Tutup modal reservasi jika terbuka
+          const reservationModal = bootstrap.Modal.getInstance(
+            document.getElementById("reservationModal")
+          );
+          if (reservationModal) {
+            reservationModal.hide();
+          }
 
-        // Tampilkan modal konfirmasi
-        confirmationModal.show();
+          // Tampilkan modal konfirmasi
+          confirmationModal.show();
 
-        // Kembali ke halaman awal ketika tombol "Oke" diklik
-        document.getElementById('confirmButton').addEventListener('click', function () {
-          confirmationModal.hide();
-          window.location.href = 'index.html'; // Ganti dengan halaman awal Anda
+          // Event listener untuk tombol "Oke"
+          document.getElementById("confirmButton").onclick = function () {
+            confirmationModal.hide();
+            window.location.href = "about.html";
+          };
         });
-      });
     </script>
   </main>
 </html>
